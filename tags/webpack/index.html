@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     
     
-    <title>Archives: 2019/10 | Blog</title>
+    <title>Tags: webpack | Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="keywords" content>
@@ -115,14 +115,14 @@
               </a>
             </li>
         
-            <li class="">
+            <li class=" active">
               <a href="/tags"  >
                 <i class="icon icon-lg icon-tags"></i>
                 TAGS
               </a>
             </li>
         
-            <li class=" active">
+            <li class="">
               <a href="/archives"  >
                 <i class="icon icon-lg icon-archives"></i>
                 ARCHIVES
@@ -148,7 +148,7 @@
           <i class="icon icon-lg icon-navicon"></i>
         </a>
         <div class="flex-col header-title ellipsis">
-            <span>Archives</span>
+            <span>Tags: webpack</span>
             
         </div>
         
@@ -158,21 +158,31 @@
         
     </div>
 </header>
-<header class="content-header archives-header">
+<header class="content-header tags-header">
     <img src="/img/banner.jpg" class="header-bg">
     <div class="container fade-scale">
-        <h1 class="title">Archives</h1>
+        <h1 class="title">Tags: webpack</h1>
         <h5 class="subtitle">
             
         </h5>
         
-        <div class="remind">
-            <p>总计文章( <span>2</span> )篇，约( <span>0.5K</span> )字</p>
-            <p>Keep moving😎!!!</p>
-        </div>
-        
     </div>
     
+<div class="tabs-bar container">
+    <nav class="tags-list">
+        <a href="/tags" style="-webkit-order:-1;order:-1" class="tags-list-item waves-effect waves-button waves-light
+            ">全部</a>
+        
+            <a href="/tags/webpack/" backup-style="-webkit-order:0;order:0" class="tags-list-item waves-effect waves-button waves-light active">webpack</a>
+            
+        
+    </nav>
+    <!-- PC show more-->
+    <div class="tags-list-more">
+        <a href="javascript:;" class="action tags-list-item waves-effect waves-circle waves-light"><i class="icon icon-ellipsis-h"></i></a>
+    </div>
+</div>
+
 
 </header>
 
@@ -191,34 +201,9 @@
 
 <div class="container body-wrap fade">
     
-                <h3 class="archive-separator">October, 2019</h3>
-                <div class="waterfall">
-            
-        <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2019-10-24 10:17:32" datetime="2019-10-24T02:17:32.967Z"  itemprop="datePublished">2019-10-24</time>
-
-      
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title " itemprop="name">
-      <a class="post-title-link" href="/2019/10/24/hello-world/">Hello World</a>
-    </h3>
-  
-
-
-
-    
-  </article>
-</div>
-        
-        <div class="waterfall-item">
+            <div class="waterfall">
+                
+                <div class="waterfall-item">
   <article class="article-card archive-article">
     <div class="post-meta">
       <time class="post-time" title="2019-10-23 17:04:45" datetime="2019-10-23T09:04:45.000Z"  itemprop="datePublished">2019-10-23</time>
@@ -248,9 +233,11 @@
   </article>
 </div>
         
-    </div>
+            </div>
+        
     
 </div>
+
 
     </main>
     <footer class="footer ">
@@ -312,7 +299,7 @@
     <ul class="reset share-icons">
       
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/archives/2019/10/&title=Blog&pic=http://yoursite.com/img/template-1.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/tags/webpack/&title=Blog&pic=http://yoursite.com/img/template-1.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -324,7 +311,7 @@
       </li>
       
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/archives/2019/10/&title=Blog&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/tags/webpack/&title=Blog&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -336,7 +323,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABvElEQVR42u3aQQ7CIBAFUO9/aU3cmtI/TKE1eayMNvBwMSl/eL3i8f6Oo89H3/z+ejTnxQMXF7fNfQ/HeOqcO54zeR4XF3c/Nyle48JULXz534GLi/tkbrWoJSUPFxf337nJAuOXp+psuLi493KTg0oecyTHmOVnNVxc3Aa3H5j2P2/Nd3FxcRtdiWoZyoPUydVxcXG3cMeLJUeR8WbmGjAnZQ4XF3cxtxpt5IFp5+hSKGG4uLgLuPlic99X5y8UVlxc3GXc6uEkabH0i+DhzLi4uBu50aPBK1G1VFXLHy4u7h7uXHN0ruky1yWJFsDFxb2UWw1Aq83XKrf8EC4u7gJu/4JFft2q347FxcW9i1uNOTpFEBcX95nc1U2Ras55smFcXNwt3OprRx6mzHGj4oiLi7uYmzRWV1zMyiNaXFzcu7hzkWW1gdpZBRcXdz83H3kLJC+IhaYLLi7uFu6KSxX5hquHK1xc3J3c6oGnE6HmEe3JPTJcXNwt3Dy8qDZfLzv84OLiPpLbua4xF5Ke3CDDxcV9DLcTl3S2gYuLu59bLS75ZqpXuC6LRXBxcRvcucC0GoZWcbi4uDdxP7AsJQuokIInAAAAAElFTkSuQmCC" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABvklEQVR42u3aQW7DMAwEwPz/0+m5QGMvyYp1gdGpQB1rfCGopV6veL0v1/Wvrt/zOrFwcXHH3ITyaeNrxKdnkjd8/CRcXNxF7nUZyrfpURIDLi7uk7l5y1ItZLi4uP+R29ss/xhcXNyncZMWJA8yqh9w5KyGi4s74Fa3P/H3kXwXFxe3xX0X17wkVZ/89itcXNwVbi/Q7I1b8tbnpmHCxcU9zM23nI9Ue3EJLi7u33Lng5B5sFLuyHBxcQ9w80tX1YNNtX1JdsHFxd3nVqPMXhGclEJcXNx9bj4uTRqXPGTJB7S4uLj73N5BpTchHR2ZcHFxD3OT4tI70vQGrjdXNHBxcVe4vfAiKXyTMW1UUnFxcQ9z59cseq1StUnCxcXd5FY/qRepzMscLi7uJrc3ZE0OKvkINm+ncHFxN7nJgLMXglQbmsIoBRcX9wD3XVx58Zq3Mj/8FxcXd4U7H5H+VnYxGdjg4uKe4FavQUwOS3mpupkM4+LirnCTQlN+dat23jyPi4v7SG5SvJLtq5c2cHFxn8ytxql503OwxcHFxW1xe5cyJyFpNX7FxcXd5E7CzUlckseyzXwXFxe3w/0CpzkBL76TjqAAAAAASUVORK5CYII=" alt="微信分享二维码">
 </div>
 
 

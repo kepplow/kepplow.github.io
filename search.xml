@@ -28,12 +28,21 @@
       <url>/2019/10/23/webpack4%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</url>
       <content type="html"><![CDATA[<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><ul>
 <li>内容</li>
-<li>– 这是什么？ —<br>这是||分隔符<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2></li>
+<li>– 这是什么<br>这是||分隔符</li>
+</ul>
+<hr>
+<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><ul>
 <li>我也忘了这是什么</li>
 </ul>
 <p><em>纳尼</em> </p>
 ]]></content>
       
+        
+        <tags>
+            
+            <tag> webpack </tag>
+            
+        </tags>
         
     </entry>
     
