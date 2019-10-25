@@ -3,6 +3,33 @@
   
     
     <entry>
+      <title><![CDATA['webpack4踩坑记录']]></title>
+      <url>/2019/10/25/webpack4%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</url>
+      <content type="html"><![CDATA[<h1 id="webpack4-采坑记录——Super-expression-must-either-be-null-or-a-function"><a href="#webpack4-采坑记录——Super-expression-must-either-be-null-or-a-function" class="headerlink" title="webpack4 采坑记录——Super expression must either be null or a function"></a>webpack4 采坑记录——Super expression must either be null or a function</h1><hr>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>在使用webpack4打包出<em>production</em>生产环境，打开html文件时报错:<br><code>Uncaught TypeError: Super expression must either be null or a function</code></p>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>据网上的说法是webpack4 在<em>production</em>模式下的默认的压缩js代码模块有问题。<br>在<em>development</em>模式下则没有问题，亲测确实如此。</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>下载其他的js压缩代码模块代替默认的，这里我使用 <em>uglifyjs-webpack-plugin</em> 插件</p>
+<ol>
+<li><p>下载插件<br><code>npm i uglifyjs-webpack-plugin --save</code></p>
+</li>
+<li><p>配置webpack.config.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">var UglifyJSWebpackPlugin = require(&apos;uglifyjs-webpack-plugin&apos;); //引入压缩js代码插件，解决webpack4默认压缩报错问题</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">    entry: &#123;</span><br><span class="line">        // 入口</span><br><span class="line">    &#125;,</span><br><span class="line">    output: &#123;</span><br><span class="line">        // 出口</span><br><span class="line">    &#125;,</span><br><span class="line">    // 优化</span><br><span class="line">    optimization: &#123;</span><br><span class="line">        minimizer: [</span><br><span class="line">            // 代替webpack4 默认js压缩</span><br><span class="line">            new UglifyJSWebpackPlugin(&#123;</span><br><span class="line">                test: [/\.(js|jsx)$/],</span><br><span class="line">                exclude: [/node_modules/, /src\/components\/vendor/],</span><br><span class="line">                cache: &quot;./.cache&quot;,</span><br><span class="line">                parallel: true,</span><br><span class="line">                sourceMap: true,</span><br><span class="line">                uglifyOptions: &#123;</span><br><span class="line">                    warnings: false,</span><br><span class="line">                    compress: &#123;</span><br><span class="line">                    inline: 1,</span><br><span class="line">                    keep_fnames: true</span><br><span class="line">                    &#125;,</span><br><span class="line">                    mangle: &#123;</span><br><span class="line">                    keep_fnames: true</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;)</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>再次打包</p>
+</li>
+</ol>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> webpack </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hello World]]></title>
       <url>/2019/10/24/hello-world/</url>
       <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
@@ -20,29 +47,6 @@
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 ]]></content>
       
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA['webpack4踩坑记录']]></title>
-      <url>/2019/10/23/webpack4%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</url>
-      <content type="html"><![CDATA[<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><ul>
-<li>内容</li>
-<li>– 这是什么<br>这是||分隔符</li>
-</ul>
-<hr>
-<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><ul>
-<li>我也忘了这是什么</li>
-</ul>
-<p><em>纳尼</em> </p>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> webpack </tag>
-            
-        </tags>
         
     </entry>
     
